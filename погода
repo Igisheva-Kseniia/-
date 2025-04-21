@@ -1,0 +1,27 @@
+def что_мне_надеть():
+    print("Приветик! Давай решим, что стоит надеть сегодня.")
+
+    temperature = input("Температура выше 20 градусов и меньше 30? (да/нет): ").strip().lower()
+
+    if temperature == "да":
+        is_rainy = input("Есть осадки? (да/нет): ").strip().lower()
+        if is_rainy == "да":
+            print("Футболку,шорты/брюки и дождевик.")
+        else:
+            print(" Футболку шорты/брюки.")
+    else:
+        temperature = input("Температура выше 0 градусов? (да/нет): ").strip().lower()
+        if temperature == "нет":
+            print(" Пуховик, шапку и шарф")
+        else:
+            is_rainy = input("Есть осадки? (да/нет): ").strip().lower()
+            if is_rainy == "нет":
+                print("Пальто.")
+            else:
+                is_raining_heavily = input("Осадки сильные? (да/нет): ").strip().lower()
+                if is_raining_heavily == "да":
+                    print("Пальто, галоши и зонт.")
+                else:
+                    print(" Пальто и дождевик.")
+
+что_надеть()
